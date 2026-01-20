@@ -110,7 +110,7 @@ import { useState } from "react";
             <button 
             type="submit" 
             className="text-white border-black box-border border  hover: border--red-500 bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-              Submit
+              .Submit.
             </button>
         </form>
 
