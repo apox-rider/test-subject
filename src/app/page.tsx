@@ -52,7 +52,7 @@ import { useState } from "react";
                     name="phone" 
                     onChange={(e)=>setRegister((prev)=>({...prev, phone:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="Phone number" 
+                    placeholder="Phone number..." 
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" 
                     required />
                 </div>
