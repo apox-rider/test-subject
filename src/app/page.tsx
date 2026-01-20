@@ -22,7 +22,7 @@ import { useState } from "react";
                     name="first_name"
                     onChange={(e)=>setRegister((prev)=>({...prev, first_name:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="first_ame" 
+                    placeholder="First Name" 
                     required />
                 </div>
                 <div>
@@ -32,7 +32,7 @@ import { useState } from "react";
                     name="last_name" 
                     onChange={(e)=>setRegister((prev)=>({...prev, last_name:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="last_name" 
+                    placeholder="Last Name" 
                     required />
                 </div>
                 <div>
