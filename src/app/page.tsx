@@ -1,13 +1,19 @@
+'use client'
 import { useState } from "react";
+import { supabase } from "../components/supabase-client";
 
  export default function Home(){
   const [register,setRegister]=useState({first_name:'', last_name:'',company:'',phone:'',website:'',email:'',confirmed_password:''})
 
-  const handleSubmit=(e:any)=>{
+  const handleSubmit=async(e:any)=>{
       e.preventDefault()
+      const {error}= await supabase.from("Registration").insert(register).single()
+      if (error){
+        console.error("Error registering", error.message);
+      }
     }
   return(
-    <>
+    <> 
     <div>
       <div className="text-center justify-center flex">
         <form onSubmit={handleSubmit} className="mt-60 block w-3xl rounded-lg border px-4 py-2.5 text-gray-900 placeholder:text-gray-400shadow-sm transition-colorsfocus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 focus:outline-nonedisabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowedinvalid:border-red-500 invalid:text-red-900 invalid:placeholder-red-400/70focus:invalid:border-red-500 focus:invalid:ring-red-500/30dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500dark:focus:border-indigo-400 dark:focus:ring-indigo-400/30dark:invalid:border-red-500 dark:invalid:text-red-300 dark:focus:invalid:ring-red-500/40">
@@ -52,8 +58,7 @@ import { useState } from "react";
                     name="phone" 
                     onChange={(e)=>setRegister((prev)=>({...prev, phone:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="Phone number" 
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" 
+                    placeholder="Phone number"  
                     required />
                 </div>
                 <div>
