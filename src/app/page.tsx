@@ -12,7 +12,7 @@ import { useState } from "react";
       <div className="text-center justify-center flex">
         <form onSubmit={handleSubmit} className="mt-60 block w-3xl rounded-lg border px-4 py-2.5 text-gray-900 placeholder:text-gray-400shadow-sm transition-colorsfocus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 focus:outline-nonedisabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowedinvalid:border-red-500 invalid:text-red-900 invalid:placeholder-red-400/70focus:invalid:border-red-500 focus:invalid:ring-red-500/30dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500dark:focus:border-indigo-400 dark:focus:ring-indigo-400/30dark:invalid:border-red-500 dark:invalid:text-red-300 dark:focus:invalid:ring-red-500/40">
             <h1 className="mb-3 mt-6 text-center text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-              Register
+              Register⭐️
             </h1>
             <div className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
