@@ -74,7 +74,7 @@ import { supabase } from "../components/supabase-client";
                 </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-7">
                 <input 
                 type="email" 
                 id="email"
