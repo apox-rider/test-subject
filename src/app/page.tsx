@@ -92,7 +92,7 @@ import { supabase } from "../components/supabase-client";
                 placeholder="Password" 
                 required />
             </div> 
-            <div className="mb-6">
+            <div className=" mb-6 ">
                 <input 
                 type="password" 
                 id="confirmPassword" 
@@ -105,7 +105,7 @@ import { supabase } from "../components/supabase-client";
             <div className="flex items-start mb-6">
                 <div className="flex items-center h-5">
                 <input 
-                id="remember" 
+                id="remember me" 
                 type="checkbox" 
                 className="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" 
                 required />
