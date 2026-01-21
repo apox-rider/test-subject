@@ -86,7 +86,7 @@ import { supabase } from "../components/supabase-client";
             <div className="mb-6">
                 <input 
                 type="password" 
-                id="password" 
+                id="sugggest a password" 
                 name="password"
                 className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
                 placeholder="Password" 
