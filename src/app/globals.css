@@ -18,3 +18,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+main{
+  background-attachment: fixed;
+  max-width: 5px;
+  border:blanchedalmond ;
+  justify-content: center;
+}
