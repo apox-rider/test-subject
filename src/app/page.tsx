@@ -1,17 +1,45 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "../components/supabase-client";
+
+ interface data{
+  id:number,
+  first_name:string,
+  last_name:string,
+  company:string,
+  phone:number,
+  website:string,
+  email:string,
+  created_at:string,
+ }
 
  export default function Home(){
   const [register,setRegister]=useState({first_name:'', last_name:'',company:'',phone:'',website:'',email:'',confirmed_password:''})
-  
+  const [regData,setRegData]=useState<data[]>([]);
+
+  const fetchData= async ()=>{
+    const {error, data} = await supabase.from("Registration").select("*").order("created_at",{ascending: true})
+    if (error){
+      console.error("Error fetchint detail:", error.message);
+      return;
+    }
+    setRegData(data)
+  }
+
+   useEffect(()=>{
+    fetchData()
+   });
+   console.log(regData);
+
 
   const handleSubmit=async(e:any)=>{
       e.preventDefault()
       const {error}= await supabase.from("Registration").insert(register).single()
       if (error){
         console.error("Error registering", error.message);
+         
       }
+      setRegister({first_name:'', last_name:'',company:'',phone:'',website:'',email:'',confirmed_password:''})
     }
   return(
     <> 
@@ -120,6 +148,36 @@ import { supabase } from "../components/supabase-client";
               Submit
             </button>
         </form>
+
+      <div>
+        <ul style={{listStyle: "none", padding: 0}}>
+          {regData.map((data, key)=>(
+              <li
+              key={key}
+              style={{
+                border:"1px solid #ccc",
+                borderRadius: "4px",
+                padding: "1rem",
+                marginBottom: "0.5rem"
+              }}>
+                <div>
+                  <h3>{data.id}</h3>
+                  <h3>{data.first_name}</h3>
+                  <h3>{data.last_name}</h3>
+                  <h3>{data.email}</h3>
+                  <h3>{data.phone}</h3>
+                  <h3>{data.company}</h3>
+                  <h3>{data.created_at}</h3>
+                  <h3>{data.website}</h3>
+                  <div>
+                    <button  style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Edit</button>
+                    <button style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Delete</button>
+                  </div>
+                </div>
+              </li>
+         ))}
+        </ul>
+      </div>
 
       </div>
     </div>
