@@ -161,7 +161,7 @@ import { supabase } from "../components/supabase-client";
                 marginBottom: "0.5rem"
               }}>
                 <div>
-                  <h3>Id: {data.id}</h3>
+                  <h3>Registered Id: {data.id}</h3>
                   <h3>First Name: {data.first_name}</h3>
                   <h3>Last Name: {data.last_name}</h3>
                   <h3>Email: {data.email}</h3>
