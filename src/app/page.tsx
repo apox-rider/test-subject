@@ -161,14 +161,14 @@ import { supabase } from "../components/supabase-client";
                 marginBottom: "0.5rem"
               }}>
                 <div>
-                  <h3>Registered Id: {data.id}</h3>
+                  <h3>Registration Id: {data.id}</h3>
                   <h3>First Name: {data.first_name}</h3>
                   <h3>Last Name: {data.last_name}</h3>
                   <h3>Email: {data.email}</h3>
                   <h3>Phone Number(+255){data.phone}</h3>
                   <h3>Company: {data.company}</h3>
                   <h3>Created At: {data.created_at}</h3>
-                  <h3>Website: {data.website}</h3>
+                  <h3>Website reg: {data.website}</h3>
                   <div>
                     <button  onClick={()=>{supabase.from("Registration")}} style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Edit</button>
                     <button style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Delete</button>
