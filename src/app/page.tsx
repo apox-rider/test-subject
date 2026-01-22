@@ -170,8 +170,8 @@ import { supabase } from "../components/supabase-client";
                   <h3>Created At: {data.created_at}</h3>
                   <h3>Website registered: {data.website}</h3>
                   <div>
-                    <button  onClick={()=>{supabase.from("Registration").update("*").single()}} style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Edit</button>
-                    <button style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Delete</button>
+                    <button onClick={()=>{supabase.from("Registration").update("*").single()}} style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Edit</button>
+                    <button onClick={()=>{supabase.from("Registration").delete().single()}} style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Delete</button>
                   </div>
                 </div>
               </li>
