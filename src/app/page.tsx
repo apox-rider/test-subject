@@ -166,8 +166,8 @@ import { supabase } from "../components/supabase-client";
                   <h3>Last Name: {data.last_name}</h3>
                   <h3>Email: {data.email}</h3>
                   <h3>Phone Number(+255){data.phone}</h3>
-                  <h3>{data.company}</h3>
-                  <h3>{data.created_at}</h3>
+                  <h3>Company: {data.company}</h3>
+                  <h3>Created At: {data.created_at}</h3>
                   <h3>{data.website}</h3>
                   <div>
                     <button  onClick={()=>{supabase.from("Registration")}} style={{ padding: "0.5rem 1rem", marginRight: "0.5rem"}}>Edit</button>
