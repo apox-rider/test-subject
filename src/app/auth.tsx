@@ -168,7 +168,7 @@ import { supabase } from "../components/supabase-client";
         </form>
 
       <div>
-        <ul style={{listStyle: "none", padding: 0}}>
+        {/* <ul style={{listStyle: "none", padding: 0}}>
           {regData.map((data, key)=>(
               <li
               key={key}
@@ -195,7 +195,7 @@ import { supabase } from "../components/supabase-client";
                 </div>
               </li>
          ))}
-        </ul>
+        </ul> */}
       </div>
 
       </div>
