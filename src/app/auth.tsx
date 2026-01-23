@@ -72,7 +72,7 @@ import { error } from "console";
             <button  
             id="change"
             className="mt-6  text-white border-black box-border border  hover: border--red-500 bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-              Change to Sign Up
+              Change_to_Sign Up
             </button>
                         
         </form>
