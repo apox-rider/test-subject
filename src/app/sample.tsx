@@ -166,8 +166,8 @@ import { supabase } from "../components/supabase-client";
               Submit
             </button>
         </form>
-
-      <div>
+  </div>
+      <div className="mt-7">
         <ul style={{listStyle: "none", padding: 0}}>
           {regData.map((data, key)=>(
               <li
@@ -198,7 +198,7 @@ import { supabase } from "../components/supabase-client";
         </ul>
       </div>
 
-      </div>
+     
     </div>
     </>
   );

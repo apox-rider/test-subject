@@ -28,7 +28,7 @@ export default function Home(){
   session?(
      <>
         <div className="border-amber-200 justify-center text-center mb-0 pb-0">
-            <button className="cursor-pointer" onClick={logOut}>log out</button>
+            <button className="cursor-pointer text-white border-black box-border border  hover: border--red-500 bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" onClick={logOut}>log out</button>
         </div>
         <Hom/>
   </>
