@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../components/supabase-client"
 import Auth from "./auth"
+import { Session } from "inspector/promises";
 
 
 export default function Home(){
@@ -20,19 +21,21 @@ export default function Home(){
     await supabase.auth.signOut()
   }
 
-  
+
   return(
-    <> {
-    session?(
-      <>
-      <button onClick={logOut}>LogOut</button>
-      <Auth/>
-      </>
-    ):(
-      <>
-      <Home/>
-      </>
-    )}
-    </>
+   <>
+   session?
+   (
+    <button onClick={logOut}>logOut</button>
+    <Auth/>
+   ):
+   (
+    <Home/>
+   )
+   </>
   )
 };
+
+
+
+
