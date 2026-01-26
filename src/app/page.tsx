@@ -14,13 +14,22 @@ export default function Home(){
   }
 
   useEffect(()=>{
-    fetchSession()
+    fetchSession();
+    
+    const{data: authListener}=supabase.auth.onAuthStateChange((_event, session)=>{
+    setIsSession(session);
+  }
+  )
+  return ()=>{
+    authListener.subscription.unsubscribe()
+  }
   }, [])
 
   const logOut=async()=>{
     await supabase.auth.signOut()
   }
 
+  
 
  return(
   <>
