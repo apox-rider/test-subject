@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../components/supabase-client"
 import Auth from "./auth"
-import { Session } from "inspector/promises";
+import Hom from "./sample"
 
 
 export default function Home(){
@@ -24,14 +24,16 @@ export default function Home(){
 
  return(
   <>
-  {session?
-  <>
-  <button onClick={logOut}>log out</button>
-  <Auth/>
-  </>:
-  <>
-  <Home/>
+  {session?(
+    <>
+    <Auth/>
+  </>):(
+    <>
+    <div className="border-amber-200 justify-center text-center mb-0 pb-0">
+    <button className="cursor-pointer" onClick={logOut}>log out</button>
+    </div>
+    <Hom/>
   </>
-  }
+  )}
   </>
  )}

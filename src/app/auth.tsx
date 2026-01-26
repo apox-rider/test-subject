@@ -1,7 +1,6 @@
 'use client'
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { supabase } from "../components/supabase-client";
-import { error } from "console";
 import { Send } from "lucide-react";
 
  
@@ -64,16 +63,29 @@ import { Send } from "lucide-react";
                     required />
                 </div>
             </div>
-            <button 
+            {/* Submit Button */}
+          <button 
             type="submit" 
-            id="submit"
-            className="text-white border-black box-border border  hover: border--red-500 bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-              Submit<Send/>
-            </button><br />
+            className="...">
+            {isSignUp ? "Sign Up" : "Sign In"} <Send/>
+          </button>
+
+          <br />
+
+          {/* Toggle Button */}
+          <button  
+           type="button" // Prevents form submission
+            onClick={() => setIsSignUp(!isSignUp)} 
+           className="...">
+            {isSignUp ? "Already have an account? Sign In" : "Need an account? Sign Up"}
+              </button>         
             <button  
-            id="change"
-            className="mt-6  text-white border-black box-border border  hover: border--red-500 bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-              Change_to_Sign Up
+              type="button" // <--- Add this!
+              id="change"
+              onClick={() => setIsSignUp(!isSignUp)} // Toggle the state
+              className="..."
+            >
+            {isSignUp ? "Switch to Sign In" : "Switch to Sign Up"}
             </button>
                         
         </form>

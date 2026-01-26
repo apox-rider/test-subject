@@ -13,7 +13,7 @@ import { supabase } from "../components/supabase-client";
   created_at:string,
  }
 
- export default function Home(){
+ export default function Hom(){
   const [register,setRegister]=useState({first_name:'', last_name:'',company:'',phone:'',website:'',email:'',confirmed_password:''})
   const [regData,setRegData]=useState<data[]>([]);
   const [newemail,setNewemail]=useState("");
