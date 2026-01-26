@@ -22,20 +22,16 @@ export default function Home(){
   }
 
 
-  return(
-   <>
-   session?
-   (
-    <button onClick={logOut}>logOut</button>
-    <Auth/>
-   ):
-   (
-    <Home/>
-   )
-   </>
-  )
-};
-
-
-
-
+ return(
+  <>
+  {session?
+  <>
+  <button onClick={logOut}>log out</button>
+  <Auth/>
+  </>:
+  <>
+  <Home/>
+  </>
+  }
+  </>
+ )}
