@@ -10,9 +10,6 @@ import { Send } from "lucide-react";
   const [email,setEmail]=useState("")
   const [password, setPassword]=useState("")
 
-  
- 
-
 
   const handleSubmit=async(e: FormEvent<HTMLFormElement>)=>{
       e.preventDefault()
@@ -67,22 +64,22 @@ import { Send } from "lucide-react";
           <button 
             type="submit" 
             className="...">
-            {isSignUp ? "Sign Up" : "Sign In"} <Send/>
+            {isSignUp ? "Sign Up" : "Sign In"}
           </button>
 
           <br />
 
-          {/* Toggle Button */}
+     
           <button  
-           type="button" // Prevents form submission
+           type="button" 
             onClick={() => setIsSignUp(!isSignUp)} 
            className="...">
-            {isSignUp ? "Already have an account? Sign In" : "Need an account? Sign Up"}
-              </button>         
+            {isSignUp ? "Already have an account?" : "Need an account? "}
+              </button>  <br />       
             <button  
-              type="button" // <--- Add this!
+              type="button"  
               id="change"
-              onClick={() => setIsSignUp(!isSignUp)} // Toggle the state
+              onClick={() => setIsSignUp(!isSignUp)}  
               className="..."
             >
             {isSignUp ? "Switch to Sign In" : "Switch to Sign Up"}

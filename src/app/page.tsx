@@ -24,16 +24,20 @@ export default function Home(){
 
  return(
   <>
-  {session?(
-    <>
-    <Auth/>
-  </>):(
-    <>
+  {
+  session?(
+     <>
     <div className="border-amber-200 justify-center text-center mb-0 pb-0">
     <button className="cursor-pointer" onClick={logOut}>log out</button>
     </div>
     <Hom/>
   </>
-  )}
+  ):(
+   
+  <>
+    <Auth/>
+  </>
+  )
+  }
   </>
  )}
