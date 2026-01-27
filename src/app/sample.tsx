@@ -105,7 +105,7 @@ import { supabase } from "../components/supabase-client";
                     name="phone" 
                     onChange={(e)=>setRegister((prev)=>({...prev, phone:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="Phone number"  
+                    placeholder="Phone_Number"  
                     required />
                 </div>
                 <div>
