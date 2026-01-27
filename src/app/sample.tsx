@@ -115,7 +115,7 @@ import { supabase } from "../components/supabase-client";
                     name="website" 
                     onChange={(e)=>setRegister((prev)=>({...prev, website:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="Website deployed" 
+                    placeholder="Website_Deployed" 
                     required />
                 </div>
             </div>
