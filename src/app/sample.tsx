@@ -180,7 +180,7 @@ import { supabase } from "../components/supabase-client";
               }}>
                 <div>
                   <h3>Registration_Id: {data.id}</h3>
-                  <h3>First Name: {data.first_name}</h3>
+                  <h3>First_Name: {data.first_name}</h3>
                   <h3>Last Name: {data.last_name}</h3>
                   <h3>Email: {data.email}</h3>
                   <h3>Phone Number(+255){data.phone}</h3>
