@@ -127,7 +127,7 @@ import { supabase } from "../components/supabase-client";
                 name="email" 
                 onChange={(e)=>setRegister((prev)=>({...prev, email:e.target.value}))}
                 className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                placeholder="Email ..." 
+                placeholder="Registration_Email" 
                 required />
             </div> 
             <div className="mb-6">
