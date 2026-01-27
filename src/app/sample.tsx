@@ -85,7 +85,7 @@ import { supabase } from "../components/supabase-client";
                     name="last_name" 
                     onChange={(e)=>setRegister((prev)=>({...prev, last_name:e.target.value}))}
                     className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
-                    placeholder="Last Name" 
+                    placeholder="Last_Name" 
                     required />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ import { supabase } from "../components/supabase-client";
                   <h3>Email: {data.email}</h3>
                   <h3>Phone_Number(+255){data.phone}</h3>
                   <h3>Company: {data.company}</h3>
-                  <h3>Created At: {data.created_at}</h3>
+                  <h3>Created_At: {data.created_at}</h3>
                   <h3>Website registered: {data.website}</h3>
                   <div>
                     <textarea name="email" id="newEmail" onChange={(e)=>setNewemail(e.target.value)}></textarea>
